@@ -1,0 +1,14 @@
+EXPLICACION DE COMANDOS
+
+B) Los comandos en este apartado funcionan en su mayoria para poner una condicion a el comando de listado ls, ls a* describe todos los archivos 
+que empiezan con a, ls a*.c muestra todos los archivos que empiezan con a y terminan en .c sim importar lo que hay en el medio, el comando ls 
+a??.c muestra todos los archivos que empiezan con a y tienen dos caracteres, cualquiera sean hasta terminar con .c, algo similar con ls a????.c 
+solamente el numero de caracteres en el medio cambia, en este caso se requieren 4. ls ?iii?.c muestra a todos los archivos que empiezan con 
+cualquier caracter al que le sigue iii tienen un caracter mas en el medio y terminan en .c, y por ultimo ls *9.c muestra todos los archivos que 
+terminan en 9.c
+
+C) ls ai[1-5].c muesta todos los archivos que empiezan en ai contienen un numero del 1 al 5 y terminan en c, ls [a-c]ii1.c muestra todos los 
+archivos que empiezan con una letra entre a y c y ademas terminan en en ii.c
+
+D) El comando echo simplemente imprime la linea por lo tanto no se ejecuta ningun comando solo se imprime a*, ls a*.c, ls a??.c, ls a????.c, ls 
+?iii?.c, ls*9.c sin ejecutar ninguno de los mismos si tiene un echo por delante.

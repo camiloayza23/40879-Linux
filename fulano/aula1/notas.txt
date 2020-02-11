@@ -1,0 +1,18 @@
+Binario es un conjunto de archivo que sirve para que Linux se inicialice, 
+dev incluye todos los dispositivos de almacenamiento, en forma de archivos, 
+conectados al sistema, es decir, cualquier disco duro conectado, partición, 
+memoria USB, o CDROM conectado al sistema y que el sistema pueda entender 
+como un volumen lógico de almacenamiento, boot tiene informacion de inicio, 
+etc es para la configuracion, home es donde se guradan los archivos, lib es 
+un conjunto de bibliotecas que tienen codigo ejecutable /usr/locallib, 
+/usr es de uso general para toda cosa que se quiera instalar, 
+/sbin es para los ejecutables, /var son archivos variables que se iran 
+modificando en el tiempo 
+
+cp: Copiar archivos
+rm: Borrar archivos
+mv: Mover archivos
+mkdir: Crear directorios
+rmdir: Borrar directorio vacios
+touch: Crear archivos 
+ls: Listar archivos en un directorio

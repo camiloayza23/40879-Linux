@@ -1,0 +1,13 @@
+COMANDOS CP, RM, MKDIR
+
+cp -l: Hace un link entre los archivos en lugar de copiarlos simplemente
+cp -v: Explica los pasos que se siguen en el proceso de copiar los archivos
+cp -r: Copia los archivos de forma recursiva
+
+rm -i: Muestra todos los archivos que son eliminados
+rm -r: Remueve los archivos de forma recursiva
+rm -d: Borra directorios que esten vacios
+
+mkdir -p: Muestra a los padres del directorio 
+mkdir -v: Imprime un mensaje por cada directorio que se cree
+mkdir: -Z: Setea la seguridad a su estado default

@@ -1,0 +1,6 @@
+LS COMANDOS
+
+ls -a: Muestra todos los archivos/directorios que se encuentran en un directorio, los bueno es que no ignora los archivos ocultos y se hace un 
+conteo total.
+ls -d: Muestra los directorios que se encuentran en el directorio
+ls -t: Muestra los archivos en el orden en el que han sido modificados 
