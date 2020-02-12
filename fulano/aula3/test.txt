@@ -1,0 +1,4 @@
+Probando el uso de vi para editar texto 
+Todo funciona bien
+Todo funciona bien
+
