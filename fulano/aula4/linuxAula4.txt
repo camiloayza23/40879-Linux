@@ -1,0 +1,53 @@
+Para ver los procesos de un usuario en especifico se usa "ps -fu <usuario>" que en este caso el 
+usuario es camila
+
+UID        PID  PPID  C STIME TTY          TIME CMD
+camila    1141     1  0 07:34 ?        00:00:00 /lib/systemd/systemd --user
+camila    1142  1141  0 07:34 ?        00:00:00 (sd-pam)
+camila    1155     1  0 07:34 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+camila    1159  1138  0 07:34 tty2     00:00:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_S
+camila    1161  1159  1 07:34 tty2     00:01:04 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/g
+
+El comando que se utiliza para ver los procesos de todos los usuarios se usa "ps -e"
+
+ PID TTY          TIME CMD
+    1 ?        00:00:03 systemd
+    2 ?        00:00:00 kthreadd
+    3 ?        00:00:00 rcu_gp
+    4 ?        00:00:00 rcu_par_gp
+    6 ?        00:00:00 kworker/0:0H-kb
+    9 ?        00:00:00 mm_percpu_wq
+   10 ?        00:00:01 ksoftirqd/0
+
+Al abrir "firefox &" imprime un PID del proceso, podemos verlo tambien por medio de "ps"
+
+  PID TTY          TIME CMD
+ 1763 pts/0    00:00:00 bash
+ 3699 pts/0    00:00:01 firefox
+ 3737 pts/0    00:00:00 Web Content
+ 3780 pts/0    00:00:00 WebExtensions
+ 3820 pts/0    00:00:00 Web Content
+ 3844 pts/0    00:00:00 ps
+
+Matamos el proceso con "kill 3699"
+
+Para abrir gedit y ponerlo en background se siguen los siguientes pasos
+
+camila@camila-VirtualBox:~/curso/fulano/aula4$ gedit
+^Z
+[1]+  Stopped                 gedit
+camila@camila-VirtualBox:~/curso/fulano/aula4$ bg
+[1]+ gedit &
+camila@camila-VirtualBox:~/curso/fulano/aula4$ 
+
+El comando top nos permite ver los procesos que estan ocupando recursos
+
+ PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                                
+ 1318 camila    20   0 3018288 296336 109004 S  4,6  7,1   2:34.92 gnome-shell                            
+ 1161 camila    20   0  455432 109724  55120 S  3,3  2,6   1:11.69 Xorg          
+
+Para matar un proceso desde top usamos top, para mostrar los procesos del usuario usamos shift m y 
+luego usamos k y ponemos el PID del proceso deseado, dos veces enter y mata el proceso elegido
+
+El proceso no sigue en background luego de cerrar la terminal, ni 
+siquiera en background
