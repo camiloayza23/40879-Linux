@@ -1,0 +1,114 @@
+Para saber el nombre de la maquina usamos el comando "hostname", el 
+resultado es: camila-VirtualBox
+
+Para saber la fecha y hora en el sistema usamos el comando "date", que 
+da como resultado: vie feb 14 07:53:47 -04 2020
+
+El comando para saber donde esta cp es "which cp" que devuelve: /bin/cp
+
+1) Con "find ." el resultado en la carpeta actual es 
+
+.
+./salida.txt
+./salida2.err
+./linuxAula4.txt
+./salida.err
+./salida1.txt
+./forever.sh
+./ex02.txt
+./salida2.txt
+./grep.txt
+
+2) El comando "find ./aula1 -maxdepth 1 -name *.txt" da como resultado
+
+./aula1/curso1.txt
+./aula1/curso2.txt
+./aula1/curso0.txt
+
+3) El comando "find ./aula4 -name 'salida*' ! -name "*.txt"" da como resultado
+ 
+./aula4/salida2.err
+./aula4/salida.err
+
+4) El comando "find ./ejemplo -type d -name "ejemplo*"" da como resultado:
+
+./ejemplo
+
+5) El comando "find ~ -type f -name ".*"" da como resultado
+
+/home/camila/.mozilla/firefox/55q7fy2y.default-release/.parentlock
+/home/camila/.mozilla/firefox/55q7fy2y.default-release/storage/default/moz-extension+++a408f03a-3c66-4f3e-8bf2-defe3c7d822c^userContextId=4294967295/.metadata-v2
+/home/camila/.mozilla/firefox/55q7fy2y.default-release/storage/default/https+++www.google.com/.metadata-v2
+/home/camila/.mozilla/firefox/55q7fy2y.default-release/storage/permanent/chrome/.metadata-v2
+/home/camila/.gitconfig
+/home/camila/.bash_history
+/home/camila/.profile
+/home/camila/.bashrc
+/home/camila/.viminfo
+/home/camila/.ICEauthority
+/home/camila/.bash_logout
+/home/camila/.sudo_as_admin_successful
+
+6) El comando "find . -type f -perm 0777" da como resultado:
+
+./grep.txt 
+
+7) El comando "find . -user camila" da como resultado
+
+.
+./aula1
+./aula1/notas.txt
+./aula1/bio.txt
+./aula2
+./aula2/ejercicios
+./aula2/ejercicios/ex01.txt
+./aula2/ejercicios/ex03.txt
+./aula2/ejercicios/ex02.txt
+./aula2/ejemplos
+./aula2/ejemplos/siii4.c
+./aula2/ejemplos/di6.o
+./aula2/ejemplos/oiii1.a
+..........
+
+8) El comando "find ~camila/ -group adm" no da ningun resultado ya que 
+no se configuraron grupos en el dispositivo, da un espacio vacio
+
+9) El comando "find ./ -atime 1" da como resultado:
+
+./salida.txt
+./salida.err
+
+10) El comando "find ./ -size 4k" da como resultado:
+
+./
+./ejemplo
+
+---------------------------------------------------------------------------- 
+El comando "find . -name "*.txt"" permite ver todos los archivos con la 
+extension de .txt
+
+./aula1/curso1.txt
+./aula1/curso2.txt
+./aula1/curso0.txt
+./fulano/aula1/notas.txt
+./fulano/aula1/bio.txt
+./fulano/aula2/ejercicios/ex01.txt
+./fulano/aula2/ejercicios/ex03.txt
+./fulano/aula2/ejercicios/ex02.txt
+./fulano/aula3/test.txt
+./fulano/aula3/ejercicios/archivo.txt
+./fulano/aula3/ejercicios/resultado.txt
+./fulano/aula3/ejercicios/ex01.txt
+./fulano/aula3/ejercicios/sorted.txt
+./fulano/aula3/ejercicios/ex02.txt
+./fulano/aula4/salida.txt
+./fulano/aula4/linuxAula4.txt
+./fulano/aula4/salida1.txt
+./fulano/aula4/ex02.txt
+./fulano/aula4/salida2.txt
+./fulano/aula4/grep.txt
+
+---------------------------------------------------------------------------
+
+Corremos el comando "find . -name "*.so" -exec rm -f {} \;" para que se 
+busquen los archivos y al mismo tiempo se elimien

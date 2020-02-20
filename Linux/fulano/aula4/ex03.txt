@@ -1,0 +1,5 @@
+El comando que nos ayuda contar lineas es "wc -l nombres.txt" que da 
+como resultado 143
+
+El comando que nos ayuda a contar palabras es "wc -w nombres.txt" que da 
+como resultado 248
